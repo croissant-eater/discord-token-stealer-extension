@@ -1,0 +1,193 @@
+/* Global settings */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  overflow-x: hidden;
+  min-height: 100vh; /* Ensure body takes full height */
+  display: flex;
+  flex-direction: column; /* Make the footer stick to the bottom */
+  animation: fadeIn 1s ease-in-out; /* Add a fade-in effect for the body */
+}
+
+.logo {
+  height: 120px; /* Set height to 100 pixels */
+  width: 300px; /* Set width to 200 pixels */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  margin-bottom: 10px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.input-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 20px auto;
+  flex-grow: 1;
+  animation: slideUp 0.6s ease-out; /* Slide-in effect for the input container */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.title:hover {
+  color: grey; /* Change text color on hover */
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blue {
+  color: grey;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #ff5722; /* Highlight text color changes on hover */
+}
+
+label {
+  font-size: 16px;
+  width: 100%;
+  text-align: start;
+  transition: color 0.3s ease;
+}
+
+.gofundme-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.gofundme-button:hover {
+  background-color: #0eda3d;
+}
+
+
+label:hover {
+  color: #007bff;
+}
+
+input[type="text"] {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 370px;
+}
+
+
+button:hover {
+  background-color: #0eda3d;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.results {
+  display: none;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect when results appear */
+}
+
+.results h3 {
+  margin-top: 0;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer h5:hover {
+  color: #ff5722; /* Footer text color change on hover */
+}
+
+.input-label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
