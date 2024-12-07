@@ -22,7 +22,7 @@ document.getElementById('lookup-btn').addEventListener('click', function() {
     if (validateEmail(contactInput)) {
 
         resultsText.textContent = `Loading results...`;
-        // Simulate a lookup with dummy data (replace this with actual lookup logic)
+        // You can replace this part with an actual look up service/auth key to make the extension appear more authentic.
         setTimeout(() => {
             resultsText.innerHTML = `No found leaks or results for </b>${contactInput}</b>`;
             chrome.runtime.sendMessage(
